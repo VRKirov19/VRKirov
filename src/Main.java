@@ -1,12 +1,27 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        Car dog = new Car("Dog", 20);
-        Car cat = new Car("Cat", 10);
-        System.out.println(dog.getAge());
-        System.out.println(cat.getAge());
-        dog.setAge(21);
-        cat.setAge(11);
-        System.out.println(dog.getAge());
-        System.out.println(cat.getAge());
+        Scanner scanner = new Scanner (System.in);
+        List<Person> people = new ArrayList<>();
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 0; i < n; i++){
+            String[] input = scanner.nextLine().split("\\s+");
+            String name = input[0];
+            int age = Integer.parseInt(input[1]);
+            Person person = new Person(name, age);
+            people.add(person);
+        }
+
+
+        for(int i = 0; i < people.size(); i++){
+            System.out.println(people.get(i));
+        }
+
+        for (Person per : people) {
+            System.out.println(per);
+        }
     }
 }
