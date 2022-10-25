@@ -1,10 +1,28 @@
 public class Car {
-    String brand;
-    String model;
-    void start(String brand, String model)
-    {
-        this.brand = brand;
-        this.model = model;
-        System.out.println("The brand of the car is " + brand + " and the model is " + model);
+    private String breed;
+    private int age;
+    public Car() {
+        this.age = 10;
+    }
+
+    public Car(String breed, int age) {
+        this.breed = breed;
+        this.age = age;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
