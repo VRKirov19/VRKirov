@@ -1,27 +1,27 @@
-import java.util.*;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        List<Person> people = new ArrayList<>();
-
-        int n = Integer.parseInt(scanner.nextLine());
-
-        for (int i = 0; i < n; i++){
-            String[] input = scanner.nextLine().split("\\s+");
-            String name = input[0];
-            int age = Integer.parseInt(input[1]);
-            Person person = new Person(name, age);
-            people.add(person);
-        }
-
-
-        for(int i = 0; i < people.size(); i++){
-            System.out.println(people.get(i));
-        }
-
-        for (Person per : people) {
-            System.out.println(per);
-        }
+        Animal animal = new Animal(10, "Meat");
+        System.out.println(animal.getAge());
+        animal.setAge(11);
+        System.out.println(animal.getAge());
+//        animal.setAge(5);
+//        System.out.println(animal.getAge());
+        ImmutableAnimal immAnimal = new ImmutableAnimal(10, "meat");
+        System.out.println(immAnimal);
+        System.out.println(immAnimal.getAge() + " " + immAnimal.getTypeOfFoodToEat());
+        ImmutableAnimal newImm = immAnimal.changeAge(11);
+        System.out.println(newImm);
+        System.out.println(newImm.getAge() + " " + newImm.getTypeOfFoodToEat());
+//        String test = "Gosho";
+//        System.out.println(test);
+//        String newString = test.replace("G", "T");
+//        System.out.println(newString);
+//        animal.eat();
+//        Cat cat = new Cat(5, "Granuli");
+//        cat.eat();
+//
+//        List<String> strings = new ArrayList<>();
     }
 }
