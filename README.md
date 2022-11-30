@@ -1,2 +1,2 @@
 # VRKirov
-Car and Lamp
+Java classes
