@@ -1,23 +1,29 @@
-public class Person {
-    public String name;
-    private int age;
-    public Person(String name, int age) {
+public class Person extends Mammal implements Animal{
+    private String name;
+    public Person(String name){
         this.name = name;
-        this.age = age;
     }
-    public int getAge() {
-        return age;
+
+    public Person(int age){
+
     }
-    public void setAge(int age) {
-        this.age = age;
-    }
+
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        if(name.contains("1") || name.contains("2")) {
-            return;
-        }
-        this.name = name;
+
+    @Override
+    public void eat(){
+        System.out.println("Person is eating...");
+    }
+
+    @Override
+    public void walk(){
+        System.out.println("Person is walking...");
+    }
+
+    @Override
+    public void test(String text){
+        System.out.println("Testing is Person");
     }
 }

@@ -1,18 +1,12 @@
-public abstract class Mammal implements Animal{
-    protected int age;
-    protected double weight;
-
-    public Mammal (int age,double weight){
-        this.age = age;
-        this.weight = weight;
-    }
+public abstract class Mammal {
     public abstract void walk();
 
-    public void testMammal() {
-        System.out.println("testing in mammal class.");
+    public void test(String text){
+        System.out.println("Testing is Mammal");
     }
+
     @Override
-    public void eat() {
-        System.out.println("eating...");
+    public String toString(){
+        return "text";
     }
 }
