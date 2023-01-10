@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -37,5 +38,30 @@ public class Main {
             System.out.print(nums.get(i) + " ");
             nums.set(i, 10);
         }
+=======
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person("Gosho");
+        Mammal person2 = new Person("Tosho");
+        Animal person3 = new Person("Ivan");
+
+        System.out.println("PERSON: ");
+        System.out.println(person.getName());
+        person.eat();
+        person.walk();
+        person.test("shshsh");
+
+        Dog dog = new Dog();
+        dog.walk();
+        dog.test("shshhshsh");
+
+
+        //System.out.println("MAMMAL: ");
+        //person2.walk();
+        //person2.test();
+//
+        //System.out.println("ANIMAL: ");
+        //person3.eat();
+>>>>>>> fd4bfc423e9d7f27916b0e2d53f64fd1e938aa09
     }
 }
